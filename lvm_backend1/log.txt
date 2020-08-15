@@ -1,0 +1,604 @@
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 10 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 9 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 8 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 7 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 6 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 5 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 4 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 3 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 2 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 1 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 10 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 9 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 8 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 7 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 6 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 5 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 4 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 3 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 2 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 1 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+An error has occurred:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 583, in connect
+    **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/green/socket.py", line 63, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/green/socket.py", line 53, in create_connection
+    sock.connect(sa)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/greenio/base.py", line 267, in connect
+    socket_checkerr(fd)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/greenio/base.py", line 51, in socket_checkerr
+    raise socket.error(err, errno.errorcode[err])
+ConnectionRefusedError: [Errno 111] ECONNREFUSED
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 304, in unique_connection
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 93, in db_version
+    return _db_version(repository, database, context)
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 100, in _db_version
+    return versioning_api.db_version(get_engine(database, context=context),
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 43, in get_engine
+    return db_session.get_api_engine()
+  File "/opt/stack/nova/nova/db/sqlalchemy/api.py", line 151, in get_api_engine
+    return api_context_manager.writer.get_engine()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 832, in get_engine
+    return self._factory.get_writer_engine()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 372, in get_writer_engine
+    self._start()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 510, in _start
+    engine_args, maker_args)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 534, in _setup_for_connection
+    sql_connection=sql_connection, **engine_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/debtcollector/renames.py", line 43, in decorator
+    return wrapped(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 201, in create_engine
+    test_conn = _test_connection(engine, max_retries, retry_interval)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 384, in _test_connection
+    raise de_ref
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 376, in _test_connection
+    return engine.connect()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2266, in connect
+    return self._connection_cls(self, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 104, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2373, in raw_connection
+    self.pool.unique_connection, _connection
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2343, in _wrap_pool_connect
+    e, dialect, self
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1582, in _handle_dbapi_exception_noconnection
+    util.raise_(newraise, with_traceback=exc_info[2], from_=e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 304, in unique_connection
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 583, in connect
+    **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/green/socket.py", line 63, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/green/socket.py", line 53, in create_connection
+    sock.connect(sa)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/greenio/base.py", line 267, in connect
+    socket_checkerr(fd)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/greenio/base.py", line 51, in socket_checkerr
+    raise socket.error(err, errno.errorcode[err])
+ConnectionRefusedError: [Errno 111] ECONNREFUSED
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 304, in unique_connection
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/stack/nova/nova/cmd/manage.py", line 2796, in main
+    ret = fn(*fn_args, **fn_kwargs)
+  File "/opt/stack/nova/nova/cmd/manage.py", line 695, in sync
+    return migration.db_sync(version, database='api')
+  File "/opt/stack/nova/nova/db/migration.py", line 26, in db_sync
+    return IMPL.db_sync(version=version, database=database, context=context)
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 53, in db_sync
+    current_version = db_version(database, context=context)
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 95, in db_version
+    return _db_version(repository, database, context)
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 100, in _db_version
+    return versioning_api.db_version(get_engine(database, context=context),
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 43, in get_engine
+    return db_session.get_api_engine()
+  File "/opt/stack/nova/nova/db/sqlalchemy/api.py", line 151, in get_api_engine
+    return api_context_manager.writer.get_engine()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 832, in get_engine
+    return self._factory.get_writer_engine()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 372, in get_writer_engine
+    self._start()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 510, in _start
+    engine_args, maker_args)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 534, in _setup_for_connection
+    sql_connection=sql_connection, **engine_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/debtcollector/renames.py", line 43, in decorator
+    return wrapped(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 201, in create_engine
+    test_conn = _test_connection(engine, max_retries, retry_interval)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 384, in _test_connection
+    raise de_ref
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 376, in _test_connection
+    return engine.connect()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2266, in connect
+    return self._connection_cls(self, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 104, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2373, in raw_connection
+    self.pool.unique_connection, _connection
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2343, in _wrap_pool_connect
+    e, dialect, self
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1582, in _handle_dbapi_exception_noconnection
+    util.raise_(newraise, with_traceback=exc_info[2], from_=e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 304, in unique_connection
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 10 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 9 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 8 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 7 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 6 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 5 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 4 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 3 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 2 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 1 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 10 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 9 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 8 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 7 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 6 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 5 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 4 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 3 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 2 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+WARNING oslo_db.sqlalchemy.engines [-] SQL connection failed. 1 attempts left.: oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+An error has occurred:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 583, in connect
+    **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/green/socket.py", line 63, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/green/socket.py", line 53, in create_connection
+    sock.connect(sa)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/greenio/base.py", line 267, in connect
+    socket_checkerr(fd)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/greenio/base.py", line 51, in socket_checkerr
+    raise socket.error(err, errno.errorcode[err])
+ConnectionRefusedError: [Errno 111] ECONNREFUSED
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 304, in unique_connection
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 93, in db_version
+    return _db_version(repository, database, context)
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 100, in _db_version
+    return versioning_api.db_version(get_engine(database, context=context),
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 43, in get_engine
+    return db_session.get_api_engine()
+  File "/opt/stack/nova/nova/db/sqlalchemy/api.py", line 151, in get_api_engine
+    return api_context_manager.writer.get_engine()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 832, in get_engine
+    return self._factory.get_writer_engine()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 372, in get_writer_engine
+    self._start()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 510, in _start
+    engine_args, maker_args)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 534, in _setup_for_connection
+    sql_connection=sql_connection, **engine_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/debtcollector/renames.py", line 43, in decorator
+    return wrapped(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 201, in create_engine
+    test_conn = _test_connection(engine, max_retries, retry_interval)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 384, in _test_connection
+    raise de_ref
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 376, in _test_connection
+    return engine.connect()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2266, in connect
+    return self._connection_cls(self, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 104, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2373, in raw_connection
+    self.pool.unique_connection, _connection
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2343, in _wrap_pool_connect
+    e, dialect, self
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1582, in _handle_dbapi_exception_noconnection
+    util.raise_(newraise, with_traceback=exc_info[2], from_=e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 304, in unique_connection
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 583, in connect
+    **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/green/socket.py", line 63, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/green/socket.py", line 53, in create_connection
+    sock.connect(sa)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/greenio/base.py", line 267, in connect
+    socket_checkerr(fd)
+  File "/usr/local/lib/python3.6/dist-packages/eventlet/greenio/base.py", line 51, in socket_checkerr
+    raise socket.error(err, errno.errorcode[err])
+ConnectionRefusedError: [Errno 111] ECONNREFUSED
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 304, in unique_connection
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/stack/nova/nova/cmd/manage.py", line 2796, in main
+    ret = fn(*fn_args, **fn_kwargs)
+  File "/opt/stack/nova/nova/cmd/manage.py", line 695, in sync
+    return migration.db_sync(version, database='api')
+  File "/opt/stack/nova/nova/db/migration.py", line 26, in db_sync
+    return IMPL.db_sync(version=version, database=database, context=context)
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 53, in db_sync
+    current_version = db_version(database, context=context)
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 95, in db_version
+    return _db_version(repository, database, context)
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 100, in _db_version
+    return versioning_api.db_version(get_engine(database, context=context),
+  File "/opt/stack/nova/nova/db/sqlalchemy/migration.py", line 43, in get_engine
+    return db_session.get_api_engine()
+  File "/opt/stack/nova/nova/db/sqlalchemy/api.py", line 151, in get_api_engine
+    return api_context_manager.writer.get_engine()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 832, in get_engine
+    return self._factory.get_writer_engine()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 372, in get_writer_engine
+    self._start()
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 510, in _start
+    engine_args, maker_args)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/enginefacade.py", line 534, in _setup_for_connection
+    sql_connection=sql_connection, **engine_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/debtcollector/renames.py", line 43, in decorator
+    return wrapped(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 201, in create_engine
+    test_conn = _test_connection(engine, max_retries, retry_interval)
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 384, in _test_connection
+    raise de_ref
+  File "/usr/local/lib/python3.6/dist-packages/oslo_db/sqlalchemy/engines.py", line 376, in _test_connection
+    return engine.connect()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2266, in connect
+    return self._connection_cls(self, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 104, in __init__
+    else engine.raw_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2373, in raw_connection
+    self.pool.unique_connection, _connection
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2343, in _wrap_pool_connect
+    e, dialect, self
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1582, in _handle_dbapi_exception_noconnection
+    util.raise_(newraise, with_traceback=exc_info[2], from_=e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 304, in unique_connection
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 493, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 325, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.6/dist-packages/pymysql/connections.py", line 630, in connect
+    raise exc
+oslo_db.exception.DBConnectionError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] ECONNREFUSED)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)

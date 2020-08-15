@@ -1,0 +1,19 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.network "private_network", ip: "192.168.12.13"
+  config.vm.hostname = "ubuntu-bionic1"
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "8192"]
+    vb.customize ["modifyvm", :id, "--cpus", "2"]
+
+#   unless File.exist?('centos1.additional.vdi')
+#     vb.customize ['createhd', '--filename', 'centos1.additional.vdi', '--size', 3 * 1024]
+#   end
+#   vb.customize ['storageattach', :id, '--storagectl', 'IDE', '--port', 0, '--device', 1, '--type', 'hdd', '--medium', 'centos1.additional.vdi']
+#
+#   unless File.exist?('centos1.additional2.vdi')
+#     vb.customize ['createhd', '--filename', 'centos1.additional2.vdi', '--size', 3 * 1024]
+#   end
+#   vb.customize ['storageattach', :id, '--storagectl', 'IDE', '--port', 1, '--device', 1, '--type', 'hdd', '--medium', 'centos1.additional2.vdi']
+  end
+end
